@@ -7,15 +7,15 @@ import random
 guess = int(input("\t\tHuman... \n\t\tGuess my number between 1 and 100.\
 		\n\t\tYou will have only 5 attempts. I play for keeps..."))
 
-num = random.randint(1,100)
+num = random.randint(1,10)
 
 
 #counter and chat for first 4 guesses
-count = 0 
+count = 1 
 while True: 
   count += 1
   if guess == num:
-    print("\t\tYou are wiser then expected ...\n\t\t\
+    print("\t\tYOU WIN! You are wiser then expected ...\n\t\t\
            human . . .")
     break
 
@@ -35,8 +35,9 @@ while True:
 
 #counter fnd chat for final guess
 while guess != num:
+  count += 1
   if guess == num:
-    print("\t\tYou are wiser then expected ...\n\t\t\
+    print("\t\tYOU WIN, You are wiser then expected ...\n\t\t\
            human . . .")
     break
 
