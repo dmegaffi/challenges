@@ -1,4 +1,6 @@
+
 #create a guess the number game. number between 1-100. limited attempts
+
 
 import random
 
@@ -28,5 +30,5 @@ while True:
            \tI knew you were weak minded")
 
   if count == 5:
-    print("\t\t\nI GAIN MORE POWERFUL WITH EVERY DEFEAT OF THE WEAK MINDED HUMAN")
+    print("\t\t\nHA! THE NUMBER WAS", str(num) + ".", "I GAIN MORE POWERFUL WITH EVERY DEFEAT OF THE WEAK MINDED HUMAN")
     break
