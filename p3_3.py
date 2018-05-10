@@ -11,11 +11,10 @@ num = random.randint(1,100)
 
 count = 0
 while True: 
-
   if guess == num:
     print("\t\tYou are wiser then expected ...\n\t\t\
            human . . .")
-
+  
   elif guess > num:
     count += 1
     guess = int(input("\n\t\tToo high, Guess again"))
@@ -24,7 +23,6 @@ while True:
     count += 1
     guess = int(input("\n\t\tToo low, guess again"))
 
- 
   if count == 4:
     print("\n\t\tYou have only one guess left human, \n\n\
            \tI knew you were weak minded")
