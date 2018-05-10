@@ -7,7 +7,7 @@ import random
 guess = int(input("\t\tHuman... \n\t\tGuess my number between 1 and 100.\
 		\n\t\tYou will have only 5 attempts. I play for keeps..."))
 
-num = random.randint(1,10)
+num = random.randint(1,100)
 
 
 #counter and chat for first 4 guesses
