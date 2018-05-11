@@ -17,11 +17,6 @@ count = 1
 
 while count != 5:
   count += 1
-
-
-
-
-
   if robot ==num:
     print("\n\t\tYou lose, I win")
 
@@ -46,13 +41,11 @@ while count != 5:
       print("\n\t\tMy turn")
       robot = random.randint(1,human)
 
-
   elif human < num:
     print("\n\t\tToo low")
     if count != 5:
       print("\n\t\tMy turn")
       robot = random.randint(human,100)
-
 
   if count == 5:
     human = int(input("\t\tWhat is your final guess?"))
