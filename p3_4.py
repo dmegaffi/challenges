@@ -9,7 +9,7 @@ raw_input("\t\tdo you accept? press any button to accept")
 
 print("\n\t\tWe begin - the secret number has been chosen, not even I know it's value!")
 
-num = random.randrange(10)+1
+num = random.randrange(100)+1
 human = input ("\n\t\twhat is your first guess?")
 robot = 0
 count = 1 
