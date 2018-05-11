@@ -15,7 +15,7 @@ robot = 0
 count = 1 
 
 
-while count != 5:
+while count != 6:
   count += 1
   if robot ==num:
     print("\n\t\tYou lose, I win")
@@ -23,33 +23,35 @@ while count != 5:
   if robot > num and count >2:
     print("\t\tI guess the number " + str(robot))
     print("\t\tI've guessed too high")
-    human = int(input("\t\tWhat is your next guess human?"))
+    if count !=6:
+      human = int(input("\t\tWhat is your next guess human?"))
 
   if robot < num and count >2:
     print("\t\tI guess the number " + str(robot))
     print("\t\tI've guessed too low")
-    human = int(input("\t\tWhat is your next guess human?"))
+    if count !=6: 
+      human = int(input("\t\tWhat is your next guess human?"))
 
   if human ==num:
     print("\n\t\tSomehow...YOU WON\n\t\t congratulations on your victory")
     sys.exit()
 
-  elif human > num and count !=5:
+  elif human > num and count !=6:
     print("\n\t\tToo high")
     print("\n\t\tMy turn")
     robot = random.randint(1,human)
 
-  elif human < num and count !=5:
+  elif human < num and count !=6:
     print("\n\t\tToo low")
     print("\n\t\tMy turn")
     robot = random.randint(human,100)
 
-  if count == 5:
+  if count == 6:
     human = int(input("\t\tWhat is your final guess?"))
 
 robot = 0
 
-while count != 7:
+while count != 8:
   count += 1
   if robot ==num:
     print("\n\t\tYou lose, I win")
