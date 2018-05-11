@@ -1,11 +1,11 @@
 import random
 import sys
 
-input("\n\t\tCare to play a game? - Press any button to continue")
+input("\n\t\tCare to play a game? - Press ENTER to continue")
 print("\n\t\tI challenge you to compete against me in a game of skill\
 	\n\t\tWhoever can guess the secret number between 1 - 100 wins")
 
-input("\t\tDo you accept? - Press any button to accept")
+input("\t\tDo you accept? - Press ENTER to accept")
 
 print("\n\t\tWe begin - the secret number has been chosen, not even I know it's value!")
 
@@ -28,21 +28,21 @@ while count != 6:
 
   if robot < num and count >2:
     print("\t\tI guess the number " + str(robot))
-    print("\t\tI've guessed too low")
+    print("\t\tI've guessed too low!")
     if count !=6: 
       human = int(input("\t\tWhat is your next guess human?"))
 
   if human ==num:
-    print("\n\t\tSomehow...YOU WON\n\t\t congratulations on your victory")
+    print("\n\t\tSomehow...you won\n\t\t congratulations on your victory")
     sys.exit()
 
   elif human > num and count !=6:
-    print("\n\t\tToo high")
+    print("\n\t\tToo high!")
     print("\n\t\tMy turn")
     robot = random.randint(1,human)
 
   elif human < num and count !=6:
-    print("\n\t\tToo low")
+    print("\n\t\tToo low!")
     print("\n\t\tMy turn")
     robot = random.randint(human,100)
 
@@ -54,22 +54,24 @@ robot = 0
 while count != 8:
   count += 1
   if robot ==num:
-    print("\n\t\tYou lose, I win")
+    print("\n\t\tYou lose, I win!")
 
   if robot > num:
-    print("\n\t\tI've guessed too high, How could I not win? The match is a DRAW")
+    print("\t\tIve guessed too high!")
+    print("\n\t\tThe secret number is "+ str(num) + "! How could I not win? The match is a DRAW")
     break
 
   if robot < num and robot > 0: 
-    print("\n\t\tI've guessed too low, How could I not win?. The match is a DRAW")
+    print("\t\tI've guessed too low!")
+    print("\n\t\tThe secret number is " + str(num) + "! How could I not win?. The match is a DRAW")
     break
 
   if human == num:
-    print("\n\t\tCongratulations on your victory")
+    print("\n\t\tCongratulations on your victory...")
     break
 
   elif human > num:
-    print("\n\t\tToo high")
+    print("\n\t\tToo high!")
     robot = random.randint(1,human)
     print("\n\t\tMy final guess is " + str(robot))
     
