@@ -34,7 +34,6 @@ while count != 5:
     print("\n\t\tSomehow...you win\n congratulations\
 		on your victory")
     sys.exit()
-    break
 
   elif human > num:
     print("\n\t\tToo high")
