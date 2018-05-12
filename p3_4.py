@@ -7,14 +7,14 @@ print("\n\t\tI challenge you to compete against me in a game of skill\
 
 input("\t\tDo you accept? - Press ENTER to accept")
 
-print("\n\t\tWe begin - the secret number has been chosen, not even I know it's value!")
+print("\n\t\tWe begin - the secret number has been chosen, not even I\n\t\tknow it's value!")
 
 num = random.randrange(100)+1
 human = int(input("\n\t\tWhat is your first guess?"))
 robot = 0
 count = 1 
 
-
+#executes guesses 1-4
 while count != 6:
   count += 1
   if robot ==num:
@@ -51,9 +51,10 @@ while count != 6:
 
 robot = 0
 
+#executes final guesses
 while count != 8:
   count += 1
-  if robot ==num:
+  if robot == num:
     print("\n\t\tYou lose, I win!")
 
   if robot > num:
@@ -63,7 +64,7 @@ while count != 8:
 
   if robot < num and robot > 0: 
     print("\t\tI've guessed too low!")
-    print("\n\t\tThe secret number is " + str(num) + "! How could I not win?. The match is a DRAW")
+    print("\n\t\tThe secret number is " + str(num) + "! How could I not win? The match is a DRAW")
     break
 
   if human == num:
