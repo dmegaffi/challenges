@@ -14,9 +14,14 @@ input("Press ENTER to continue")
 
 count = 0
 score = 0
+last = False
 
-while score != 100:
-  if count != 0:
+while count !=4:
+  if count == 3:
+     input("this is the last jumble - PREPARE YO\'SELF")
+     last = True	
+
+  if count !=0:
     check = input("press ENTER to continue playing, otherwise type EXIT to quit").lower()
     if check == "exit":
       sys.exit()
@@ -26,6 +31,11 @@ while score != 100:
   jumble =""
   mark = random.randrange(len(words))
   select = words[mark]
+  
+  #had to create var to hold value as their counterpart will be destroyed
+  anwser = select
+  hinter = hints[mark]
+  
   words = words[:mark] + words[(mark+1):]
   hints = hints[:mark] + hints[(mark+1):]
 
@@ -39,7 +49,7 @@ while score != 100:
     print (jumble)
     hint = str((input("do you require a hint? - enter  y or n").lower()))
     if hint == "y":
-      print("Your hint is this - " + HINTS[mark])
+      print("Your hint is this - " + hinter)
       input("Press ENTER to continue")
       break
     elif hint == "n":
@@ -52,7 +62,7 @@ while score != 100:
 
   guess = str(input("what is your guess?"))
 
-  if guess == WORDS[mark]:
+  if guess == anwser:
     print("congratulations! your guess is correct")
     if hint == False:
       score += 10
@@ -68,6 +78,8 @@ while score != 100:
     print("you lose 10 points")
     score -= 10
 
+  if last == True:
+    print("Thanks for playing!")
 
 
 
