@@ -10,8 +10,8 @@ words= WORDS
 HINTS = ("mancalf","Mary rode to Bethlehem","cuck w/o an l","oinksmall")
 hints = HINTS
 
-print("\tTry to guess the jumbled word")
-input("\tPress ENTER to continue")
+print("\n\tTry to guess the jumbled word")
+input("\n\tPress ENTER to continue")
 
 count = 0
 score = 0
@@ -19,11 +19,11 @@ last = False
 
 while count !=4:
   if count == 3:
-     print("\tThis is the final jumble - PREPARE YO\'SELF")
+     print("\n\tThis is the final jumble - PREPARE YO\'SELF")
      last = True	
 
   if count !=0:
-    check = input("\tPress ENTER to continue playing,  otherwise type EXIT to quit").lower()
+    check = input("\n\tPress ENTER to continue playing,  otherwise type EXIT to quit").lower()
     if check == "exit":
       sys.exit()
   
@@ -47,24 +47,24 @@ while count !=4:
     
 
   while True:
-    print (jumble)
-    hint = str((input("\tDo you require a hint? - enter  y or n").lower()))
+    print ("\n" + jumble)
+    hint = str((input("\n\tDo you require a hint? - enter  y or n").lower()))
     if hint == "y":
       print("\tYour hint is this - " + hinter)
-      input("\tPress ENTER to continue")
+      input("\n\tPress ENTER to continue")
       break
     elif hint == "n":
-      print("\tA bold move!")
+      print("\n\tA bold move!")
       hint = False
       break
     else:
-      print("\tThat was not an expected response")
+      print("\n\tThat was not an expected response")
       print("\tTry again")
 
   guess = str(input("\tWhat is your guess?"))
 
   if guess == anwser:
-    print("\tCongratulations! your guess is correct")
+    print("\n\tCongratulations! your guess is correct")
     if hint == False:
       score += 10
       print("\tYou are awarded 10 points")
@@ -75,12 +75,13 @@ while count !=4:
       print("\tYour new overall score is " + str(score))
 
   else:
-    print("\tSorry, that's incorrect")
-    print("\tYou lose 10 points")
     score -= 10
+    print("\n\tSorry, that's incorrect")
+    print("\tYou lose 10 points")
+    print("\tYour new overall score is " + str(score))
 
   if last == True:
-    print("\tThanks for playing!")
+    print("\n\tThanks for playing!")
 
 
 
