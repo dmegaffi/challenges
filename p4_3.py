@@ -1,16 +1,17 @@
 #word jumble game
 #user is given random word, scrambled, has to guess the word
+#must have a score feature, where player is penalized for accepting a hint
 
 import random
 import sys
 
 WORDS = ("cowboy","donkey","chicken", "piglet")
 words= WORDS
-HINTS = ("mancalf","Mary rode to Bethlehem","cuck with an l","oinksmall")
+HINTS = ("mancalf","Mary rode to Bethlehem","cuck w/o an l","oinksmall")
 hints = HINTS
 
-print("Try to guess the jumbled word")
-input("Press ENTER to continue")
+print("\tTry to guess the jumbled word")
+input("\tPress ENTER to continue")
 
 count = 0
 score = 0
@@ -18,11 +19,12 @@ last = False
 
 while count !=4:
   if count == 3:
-     input("this is the last jumble - PREPARE YO\'SELF")
+     print("\t	This is the final jumble - PREPARE YO\'SELF")
      last = True	
 
   if count !=0:
-    check = input("press ENTER to continue playing, otherwise type EXIT to quit").lower()
+    check = input(\t"Press ENTER to continue playing, \n\t\
+		    otherwise type EXIT to quit").lower()
     if check == "exit":
       sys.exit()
   
@@ -47,39 +49,39 @@ while count !=4:
 
   while True:
     print (jumble)
-    hint = str((input("do you require a hint? - enter  y or n").lower()))
+    hint = str((input("\tDo you require a hint? - enter  y or n").lower()))
     if hint == "y":
-      print("Your hint is this - " + hinter)
-      input("Press ENTER to continue")
+      print("\tYour hint is this - " + hinter)
+      input("\tPress ENTER to continue")
       break
     elif hint == "n":
-      print("A bold move!")
+      print("\tA bold move!")
       hint = False
       break
     else:
-      print("that was not an expected response")
-      print("try again")
+      print("\tThat was not an expected response")
+      print("\tTry again")
 
-  guess = str(input("what is your guess?"))
+  guess = str(input("\tWhat is your guess?"))
 
   if guess == anwser:
-    print("congratulations! your guess is correct")
+    print("\tCongratulations! your guess is correct")
     if hint == False:
       score += 10
-      print("you are awarded 10 points")
-      print("your new overall score is " + str(score))
+      print("\tYou are awarded 10 points")
+      print("\tYour new overall score is " + str(score))
     else:
       score += 5
-      print("you are awarded 5 points")
-      print("your new overall score is " + str(score))
+      print("\tYou are awarded 5 points")
+      print("\tYour new overall score is " + str(score))
 
   else:
-    print("sorry, that's incorrect")
-    print("you lose 10 points")
+    print("\tSorry, that's incorrect")
+    print("\tYou lose 10 points")
     score -= 10
 
   if last == True:
-    print("Thanks for playing!")
+    print("\tThanks for playing!")
 
 
 
