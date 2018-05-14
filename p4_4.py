@@ -57,7 +57,7 @@ while True:
   if remain == "y":
     continue
 
-  if remain == "n":
+  else remain == "n":
     print("\n\tThanks for playing!")
     break
  
