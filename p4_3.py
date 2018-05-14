@@ -19,18 +19,17 @@ last = False
 
 while count !=4:
   if count == 3:
-     print("\t	This is the final jumble - PREPARE YO\'SELF")
+     print("\tThis is the final jumble - PREPARE YO\'SELF")
      last = True	
 
   if count !=0:
-    check = input(\t"Press ENTER to continue playing, \n\t\
-		    otherwise type EXIT to quit").lower()
+    check = input("\tPress ENTER to continue playing,  otherwise type EXIT to quit").lower()
     if check == "exit":
       sys.exit()
   
   count +=1
 
-  jumble =""
+  jumble ="\t"
   mark = random.randrange(len(words))
   select = words[mark]
   
