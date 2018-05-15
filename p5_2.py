@@ -6,8 +6,8 @@ import sys
 
 
 name = input("\n\t\tEnter your characters name")
-
-pools = {"\n\t\tstrength":0, "health":0, "wisdom":0, "dexterity":0}
+mark = False
+pools = {"strength":0, "health":0, "wisdom":0, "dexterity":0}
 points = 30
 count = 0
 
@@ -40,7 +40,7 @@ while True:
   if att == 1:
     way = input("\t\tAre you increasing or decreasing the attribute pool?\n\t\tEnter UP or DOWN").upper()
     if way == "UP":
-      movem = int(input("\n\t\tBy how many point?"))
+      movem = int(input("\n\t\tBy how many points?"))
       if movem > points:
         print("\n\t\tsorry you do not have enough points to do that!")
       else:	
@@ -48,7 +48,7 @@ while True:
         points -= movem
         print("\n\t\tYou have added ", movem, " points to the attribute: strength")
     elif way == "DOWN":
-      movem = int(input("\n\t\tBy how many point?"))
+      movem = int(input("\n\t\tBy how many points?"))
       if movem > pools["strength"]:
         print("\n\t\tsorry you do not have enough points to do that!")
       else:
@@ -62,7 +62,7 @@ while True:
   elif att == 2:
     way = input("\t\tAre you increasing or decreasing the attribute pool?\n\t\tEnter UP or DOWN").upper()
     if way == "UP":
-      movem = int(input("\n\t\tBy how many point?"))
+      movem = int(input("\n\t\tBy how many points?"))
       if movem > points:
         print("\n\t\tsorry you do not have enough points to do that!")
       else:
@@ -70,7 +70,7 @@ while True:
         points -= movem
         print("\n\t\tYou have added ", movem, " points to the attribute: health")
     elif way == "DOWN":
-      movem = int(input("\n\t\tBy how many point?"))
+      movem = int(input("\n\t\tBy how many points?"))
       if movem > pools["health"]:
         print("\n\t\tsorry you do not have enough points to do that!")
       else:
@@ -84,7 +84,7 @@ while True:
   elif att == 3:
     way = input("\t\tAre you increasing or decreasing the attribute pool?\n\t\tEnter UP or DOWN").upper()
     if  way == "UP":
-      movem = int(input("\n\t\tBy how many point?"))
+      movem = int(input("\n\t\tBy how many points?"))
       if movem > points:
         print("\n\tsorry you do not have enough points to do that!")
       else:
@@ -93,7 +93,7 @@ while True:
         print("\n\t\tYou have added ", movem, " points to the attribute: wisdom")
 
     elif way == "DOWN":
-      movem = int(input("\n\t\tBy how many point?"))
+      movem = int(input("\n\t\tBy how many points?"))
       if movem > pools["wisdom"]:
         print("\n\t\tsorry you do not have enough points to do that!")
       
@@ -108,7 +108,7 @@ while True:
   elif att == 4:
     way = input("\t\tAre you increasing or decreasing the attribute pool?\n\t\tEnter UP or DOWN").upper()
     if way == "UP":
-      movem = int(input("\n\t\tBy how many point?"))
+      movem = int(input("\n\t\tBy how many points?"))
       if movem > points:
         print("\n\t\tsorry you do not have enough points to do that!")
       else:
@@ -116,7 +116,7 @@ while True:
         points -= movem
         print("\n\t\tYou have added ", movem, " points to the attribute: dexterity")
     elif way == "DOWN":
-      movem = int(input("\n\t\tBy how many point?"))
+      movem = int(input("\n\t\tBy how many points?"))
       if movem > pools["dexterity"]:
         print("\n\t\tsorry you do not have enough points to do that!")
       else:
