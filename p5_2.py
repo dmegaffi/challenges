@@ -131,18 +131,20 @@ while True:
 
 
 
-  if points == 0:
+  while points == 0:
     mark = False
     print("\n\t\tYou have assigned all of your points!")
     exit = input("\n\t\tWould you like to exit? - enter Y or N")
     if exit == "y":
       print("\n\t\tYour character:", name, "has the following attributes:\n", pools)
       print("\t\tGoodBye!")
-      break
+      sys.exit() 
     elif exit == "n":
       print("\n\t\tyou've chosen to continue editing your attribute distribution.")
       mark = True
-
+      break
+    else:
+      print("sorry I didn't understand that")
 
 
 
