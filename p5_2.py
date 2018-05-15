@@ -27,7 +27,7 @@ while True:
 
   print("\n\t\tYou have ", points, "remaining to be assigned")
   print("\t\tYou can add or take away points from any attribute")
-  print("\t\tYour current skills are as follows, . . . \n\n", pools)
+  print("\t\tYour current skills are as follows, . . . \n\n\t\t", pools)
   print("""
               \n\n\t\t\tSTRENGTH ---------- ENTER 1
 	      \t\tHEALTH ------------ ENTER 2
@@ -35,7 +35,6 @@ while True:
 	      \t\tDEXTERITY --------- ENTER 4\n """)
 
   att = int(input("\n\t\tWhich attribute do you select?"))
-
 
   if att == 1:
     way = input("\t\tAre you increasing or decreasing the attribute pool?\n\t\tEnter UP or DOWN").upper()
@@ -126,9 +125,6 @@ while True:
         print("\t\tYou now have", pools["dexterity"], "points remaining in dexterity attribute.")
     else:
       print("\n\t\tsorry I didnt understand that response")
-
-
-
 
   while points == 0:
     mark = False
