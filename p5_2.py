@@ -9,7 +9,6 @@ name = input("\n\t\tEnter your characters name")
 
 pools = {"\n\t\tstrength":0, "health":0, "wisdom":0, "dexterity":0}
 points = 30
-mark = False
 count = 0
 
 while True:
@@ -136,7 +135,7 @@ while True:
     print("\n\t\tYou have assigned all of your points!")
     exit = input("\n\t\tWould you like to exit? - enter Y or N")
     if exit == "y":
-      print("\n\t\tYour character:", name, "has the following attributes:\n", pools)
+      print("\n\t\tYour character:", name, "has the following attributes:\n\n\t\t", pools)
       print("\t\tGoodBye!")
       sys.exit() 
     elif exit == "n":
