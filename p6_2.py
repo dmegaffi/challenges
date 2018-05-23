@@ -1,5 +1,4 @@
 #use the ask_number function to alter a previous challenge from chapter 3
-#created main function but have not yet covered "if name == main"
 import random
 
 
@@ -51,4 +50,5 @@ def main():
       print("\t\t\nHA! THE NUMBER WAS", str(num) + ".", "I GAIN MORE POWER WITH EVERY DEFEAT OF THE WEAK MINDED HUMAN")
       break
 
-main()
+if __name__ == "__main__":
+  main()
