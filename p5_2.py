@@ -25,7 +25,7 @@ while True:
       print("\n\t\tSorry I didn't understand that")
       continue
 
-  print("\n\t\tYou have ", points, "remaining to be assigned")
+  print("\n\t\tYou have", points, "points remaining to be assigned")
   print("\t\tYou can add or take away points from any attribute")
   print("\t\tYour current skills are as follows, . . . \n\n\t\t", pools)
   print("""
@@ -57,7 +57,8 @@ while True:
         print("\t\tYou now have", pools["strength"], "points remaining in strength attribute.")
     else:
       print("\n\t\tsorry I didnt understand that response")
-  
+
+
   elif att == 2:
     way = input("\t\tAre you increasing or decreasing the attribute pool?\n\t\tEnter UP or DOWN").upper()
     if way == "UP":
@@ -80,6 +81,7 @@ while True:
     else:
       print("\n\t\tsorry I didnt understand that response")
 
+
   elif att == 3:
     way = input("\t\tAre you increasing or decreasing the attribute pool?\n\t\tEnter UP or DOWN").upper()
     if  way == "UP":
@@ -90,12 +92,10 @@ while True:
         pools["wisdom"] += movem
         points -= movem
         print("\n\t\tYou have added ", movem, " points to the attribute: wisdom")
-
     elif way == "DOWN":
       movem = int(input("\n\t\tBy how many points?"))
       if movem > pools["wisdom"]:
         print("\n\t\tsorry you do not have enough points to do that!")
-      
       else:
         pools["wisdom"] -= movem
         points += movem
@@ -103,6 +103,7 @@ while True:
         print("\t\tYou now have", pools["wisdom"], "points remaining in wisdom attribute.")
     else:
       print("\n\t\tsorry I didnt understand that response")
+
 
   elif att == 4:
     way = input("\t\tAre you increasing or decreasing the attribute pool?\n\t\tEnter UP or DOWN").upper()
@@ -125,6 +126,7 @@ while True:
         print("\t\tYou now have", pools["dexterity"], "points remaining in dexterity attribute.")
     else:
       print("\n\t\tsorry I didnt understand that response")
+
 
   while points == 0:
     mark = False
