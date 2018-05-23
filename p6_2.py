@@ -1,3 +1,5 @@
+#use the ask_number function to alter a previous challenge from chapter 3
+
 import random
 
 
