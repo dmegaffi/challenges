@@ -27,7 +27,6 @@ def save_score(name, new_score, filee):
     high_scores.append((name, new_score))
     high_scores = sorted(high_scores, key=itemgetter(1), reverse = True)[:9]
     return high_scores
-    #print(high_scores) 
     
 def push_list(filee, the_list):
     with open(filee, "wb") as h:
@@ -120,4 +119,8 @@ def main():
     #the_scores.reverse()
     print(the_scores)
 
-main()
+#Purpose - if you need to use a function from this file, you can import it
+#and not worry about executing the main function. Because the variable __name__ will not equal "__main__" in that case
+if __name__ == "__main__":
+  
+  main()
