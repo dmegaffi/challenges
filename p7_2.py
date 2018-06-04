@@ -7,7 +7,7 @@ import sys, pickle, shelve, os
 
 global high_scores
 
-def_highscores = [("vacant",0),("vacant",0),("vacant",0),("vacant",0),("vacant",0),("vacant",0),("vacant",0),("vacant",0),("vacant",0),("vacant",0)]
+def_highscores = [("vacant",0),("vacant",0),("vacant",0),("vacant",0),("vacant",0)]
 
 #ensures file exists, if not creates one
 #makes sure file has something in it, if not put in the vacant markers
@@ -25,7 +25,7 @@ def save_score(name, new_score, filee):
   with open(filee, "rb") as h:
     high_scores = pickle.load(h)
     high_scores.append((name, new_score))
-    high_scores = sorted(high_scores, key=itemgetter(1), reverse = True)[:9]
+    high_scores = sorted(high_scores, key=itemgetter(1), reverse = True)[:5]
     return high_scores
     
 def push_list(filee, the_list):
@@ -116,7 +116,6 @@ def main():
 
   with open("high_scores.dat","rb") as f:
     the_scores = pickle.load(f)
-    #the_scores.reverse()
     print(the_scores)
 
 #Purpose - if you need to use a function from this file, you can import it
