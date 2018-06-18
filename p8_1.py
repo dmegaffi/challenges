@@ -15,6 +15,10 @@ class Critter(object):
         self.hunger += 1
         self.boredom += 1
 
+    def __str__(self):
+        return("hunger level is " + str(self.hunger) + \
+               "\nboredom level is " + str(self.boredom))
+
     @property
     def mood(self):
         unhappiness = self.hunger + self.boredom
@@ -106,6 +110,10 @@ def main():
         # play with your critter
         elif choice == "3":
             crit.play()
+
+        #printing string representation of object
+        elif choice == "4":
+            print(crit)
 
         # some unknown choice
         else:
